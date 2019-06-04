@@ -1,1 +1,9 @@
 *.user 
+*moc_*
+*qrc_res*
+*.swp
+*.o
+
+build/release/QAESEncryption
+
+*.qaesencryption
