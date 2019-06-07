@@ -3,7 +3,7 @@
 *qrc_res*
 *.swp
 *.o
-
+build/*
 build/release/QAESEncryption
 
 *.qaesencryption
