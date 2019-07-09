@@ -4,7 +4,7 @@
 #include <QObject>
 #include <QByteArray>
 
-class QAESEncryption : public QObject
+class Q_DECL_EXPORT QAESEncryption : public QObject
 {
     Q_OBJECT
 public:
