@@ -40,3 +40,4 @@ DISTFILES += \
 RESOURCES += \
     res.qrc
 
+include(ccache.pri)
