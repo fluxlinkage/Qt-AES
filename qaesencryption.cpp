@@ -34,7 +34,7 @@ QByteArray QAESEncryption::RemovePadding(const QByteArray &rawText, QAESEncrypti
             ret.remove(ret.length()-1, 1);
         break;
     case Padding::PKCS7:
-        ret.remove(ret.length() - ret.back(), ret.back());
+        ret.remove(ret.length() - *ret.rbegin(), *ret.rbegin());
         break;
     case Padding::ISO:
     {
