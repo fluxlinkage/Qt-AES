@@ -9,15 +9,14 @@ CONFIG -= app_bundle
 
 TEMPLATE = app
 
-SOURCES += main.cpp \
-    qaesencryption.cpp \
-    unit_test/aestest.cpp
-
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
 # deprecated API in order to know how to port your code away from it.
 DEFINES += QT_DEPRECATED_WARNINGS
+
+DEFINES += USE_INTEL_AES_IF_AVAILABLE
+QMAKE_CXXFLAGS += -maes
 
 CONFIG(release, debug|release): {
     DESTDIR="$$PWD/build/release"
@@ -32,7 +31,14 @@ CONFIG(release, debug|release): {
 
 HEADERS += \
     qaesencryption.h \
+    aesni/aesni-key-exp.h \
+    aesni/aesni-enc-ecb.h \
+    aesni/aesni-enc-cbc.h \
     unit_test/aestest.h
+
+SOURCES += main.cpp \
+    qaesencryption.cpp \
+    unit_test/aestest.cpp
 
 DISTFILES += \
     unit_test/longText.txt
