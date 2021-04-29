@@ -9,6 +9,7 @@
 #define do_rdtsc _do_rdtsc
 #endif
 #endif
+#include "./../qtsecret_global.h"
 
 class Qt_SECRETSHARED_EXPORT QAESEncryption : public QObject
 {
