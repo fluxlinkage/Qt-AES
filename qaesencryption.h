@@ -10,7 +10,7 @@
 #endif
 #endif
 
-class Q_DECL_EXPORT QAESEncryption : public QObject
+class Qt_SECRETSHARED_EXPORT QAESEncryption : public QObject
 {
     Q_OBJECT
 public:
